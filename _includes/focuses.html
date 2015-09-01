@@ -1,0 +1,19 @@
+<div class="focus-buckets">
+  {% for focus in site.data.focuses %}
+  <div class="focus">
+    <div class="title"> > {{ focus.title }} </div>
+    <div class="wrapper">
+      <div class="left">
+        <div class="description">
+          {{ focus.description }}
+        </div>
+      </div>
+      <div class="right">
+        <div class="video">
+          {{ focus.video_url }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

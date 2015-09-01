@@ -1,0 +1,57 @@
+.site-footer {
+  width: 60%;
+  margin: 0 auto;
+  padding: 3% 4%;
+  background-color: $grey-color-dark;
+  .about {
+    .title {
+      color: $background-color;
+      margin-bottom: 1em;
+    }
+    .details {
+      width: 80%;
+      .photo-container {
+        display: inline-block;
+        height: 6em;
+        width: 6em;
+        margin-right: 1em;
+        float: left;
+        border: $grey-color-light solid thin;
+        .headshot {
+          height: 100%;
+          width: 100%;
+        }
+
+      }
+      .description {
+        display: inline-block;
+        width: 65%;
+        font-size: .8em;
+        color: $grey-color-light;
+      }
+    }
+    .upcoming {
+      clear: both;
+      margin-top: 3em;
+      margin-bottom: 2em;
+      .title {
+        margin-bottom: 1em;
+      }
+      .event {
+        margin-bottom: .5em;
+        display: block;
+        color: $grey-color-light;
+        a {
+          color: $site-highlight;
+        }
+      }
+    }
+    .links {
+      color: $grey-color-light;
+      .link {
+        text-decoration: none;
+        color: $site-highlight;
+      }
+    }
+  }
+}

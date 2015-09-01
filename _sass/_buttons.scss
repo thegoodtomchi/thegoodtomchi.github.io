@@ -1,0 +1,55 @@
+.default-button {
+  background: none;
+  border: none;
+  outline: $orange-color solid medium;
+  color: $orange-color;
+
+  .inner-link {
+    text-decoration: none;
+    color: $orange-color;
+  }
+}
+
+.filled-button {
+  background-color: $orange-color;
+  color: $site-background-color;
+
+  .inner-link {
+    color: $site-background-color;
+  }
+}
+
+.default-button-large {
+  @extend .default-button;
+  width: 15em;
+  height: 3em;
+}
+
+.default-button-medium {
+  @extend .default-button;
+  width: 10em;
+  height: 2em;
+}
+
+.default-button-small {
+  @extend .default-button;
+}
+
+.filled-button-large {
+  @extend .default-button;
+  @extend .filled-button;
+  width: 15em;
+  height: 3em;
+}
+
+.filled-button-medium {
+  @extend .default-button;
+  @extend .filled-button;
+  width: 10em;
+  height: 2em;
+}
+
+.filled-button-small {
+  @extend .default-button;
+  @extend .filled-button;
+}

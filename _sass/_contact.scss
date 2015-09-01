@@ -1,0 +1,29 @@
+.contact {
+  width: 60%;
+  margin: 2em auto;
+
+  .interests {
+      .title {
+        color: $site-highlight;
+        margin: 2% 0;
+      }
+      .interest-checks {
+        .checkbox {
+          margin: 1% 2%;
+          border: none;
+        }
+      }
+
+      .form-text-input {
+        .textarea-input {
+          width: 70%;
+          height: 8em;
+          resize: none;
+          margin-bottom: 2%;
+        }
+      }
+      #submit-form {
+        text-align: center;
+      }
+  }
+}

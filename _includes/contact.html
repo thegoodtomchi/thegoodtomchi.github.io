@@ -1,0 +1,15 @@
+<div class="contact" id="contact">
+  <div class="interests">
+    <div class="title">I'M INTERESTED IN</div>
+    <form class="interest-checks" action="">
+      {% for focus in site.data.focuses %}
+      <input type="checkbox" id={{focus.id}} class="checkbox" name={{focus.id}} value={{focus.id}}>{{focus.title}}</br>
+      {% endfor %}
+    </form>
+    <div class="title">What changes would you like to see in the world?</div>
+    <form class="form-text-input" action="">
+      <textarea id="textarea-input" class="textarea-input"></textarea>
+    </form>
+    <button id="submit-form" onclick="window.submitForm()" class="filled-button-medium">GET INVOLVED</button>
+  </div>
+</div>

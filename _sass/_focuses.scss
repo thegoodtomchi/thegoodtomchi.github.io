@@ -1,0 +1,31 @@
+.focus-buckets {
+  width: 60%;
+  margin: 2em auto;
+  border-bottom: #4A4A4A solid thin;
+}
+
+.focus-buckets .focus {
+  margin: 2em;
+  .title {
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: $text-header-color
+  }
+
+  .wrapper {
+    overflow: hidden;
+    .left {
+      float: left;
+      width: 65%;
+      .description {
+          color: $text-body-color;
+      }
+    }
+    .right {
+      float: left;
+      width: 35%;
+      height: 125px;
+      background-color: $grey-color-dark;
+    }
+  }
+}

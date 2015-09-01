@@ -1,0 +1,72 @@
+.top-banner {
+  margin: 0 auto;
+  width: 100%;
+  border-bottom: #4A4A4A solid thick;
+  .banner-contents {
+    position: relative;
+    width: 100%;
+
+    .inner {
+      position: absolute;
+      left: 50%;
+
+      .site-icon {
+        position: absolute;
+        left: -80%;
+        top: 100%;
+        .icon {
+          position: relative;
+          height: 15vh;
+        }
+      }
+
+      .highlights-container {
+        position: absolute;
+        border-right: #A5A7D5 solid medium;
+        padding-top: 5em;
+        padding-right: 2em;
+        .highlights {
+          position: relative;
+          list-style-type: none;
+
+          .highlight {
+            margin: 1em;
+            text-align: right;
+            font-size: 24px;
+          }
+
+        }
+      }
+
+      .get-involved {
+        position: relative;
+        text-align: center;
+        left: -50%;
+        bottom: -65vh;
+      }
+
+      .banner-quote {
+        position: relative;
+        text-align: center;
+        left: -50%;
+        bottom: -70vh;
+      }
+
+
+    }
+
+    .image-carousel {
+      #current-image {
+        width: 100%;
+        height: 85vh;
+        max-height: 85vh;
+        background: url(/statics/img/art/art_1.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    }
+
+  }
+}
