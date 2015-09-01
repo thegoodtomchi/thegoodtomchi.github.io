@@ -4,11 +4,12 @@
     <div class="title"> > {{ focus.title }} </div>
     <div class="wrapper">
       <div class="left">
-        <div class="description">
+        <div class="focus-descriptions">
           {{ focus.description }}
+          <a href="#" onclick="sendPage('{{focus.id}}')" title="read more" class="readmore">Read more »</a>
         </div>
       </div>
-      <div class="right">
+      <div class="right" onclick="sendPage('{{focus.id}}')">
         <div class="video">
           {{ focus.video_url }}
         </div>

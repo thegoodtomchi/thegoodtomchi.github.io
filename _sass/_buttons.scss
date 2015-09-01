@@ -23,16 +23,26 @@
   @extend .default-button;
   width: 15em;
   height: 3em;
+  .inner-link {
+    width: 15em;
+    height: 3em;
+  }
 }
 
 .default-button-medium {
   @extend .default-button;
-  width: 10em;
-  height: 2em;
+  .inner-link {
+    width: 10em;
+    height: 2em;
+  }
 }
 
 .default-button-small {
   @extend .default-button;
+  .inner-link {
+    width: 5em;
+    height: 1em;
+  }
 }
 
 .filled-button-large {

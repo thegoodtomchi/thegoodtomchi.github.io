@@ -6,26 +6,36 @@
 
 .focus-buckets .focus {
   margin: 2em;
+  max-height: 14em;
+  overflow: hidden;
   .title {
     margin-bottom: 1em;
     font-size: 2em;
-    color: $text-header-color
+    color: $text-header-color;
   }
 
   .wrapper {
-    overflow: hidden;
     .left {
       float: left;
       width: 65%;
-      .description {
+      padding-right: 1%;
+      .focus-descriptions {
           color: $text-body-color;
+
+          .readmore {
+            color: $site-highlight;
+            text-decoration: none;
+            margin-left: .5em;
+          }
       }
     }
     .right {
       float: left;
-      width: 35%;
+      width: 34%;
+      max-width: 10em;
       height: 125px;
       background-color: $grey-color-dark;
+      cursor: pointer;
     }
   }
 }

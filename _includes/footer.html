@@ -12,7 +12,7 @@
         {% capture eventtime %}{{event.date | date: '%s'}}{% endcapture %}
         {% if eventtime > nowunix %}
           <div class="event">
-            {{event.date}} - <a href={{event.link}}>{{event.title}}</a>
+            {{event.viewable_date}} - <a href={{event.link}}>{{event.title}}</a>
           </div>
         {% endif %}
       {% endfor %}
