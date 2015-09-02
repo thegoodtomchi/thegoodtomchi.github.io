@@ -2,20 +2,20 @@
   <div class="banner-contents">
     <div class="inner">
       <div class="site-icon">
-        <img class="icon" src="/statics/img/emblem_with_name.png" />
+        <img class="icon" src={{site.data.consts.emblem}} />
       </div>
       <div class="highlights-container">
         <ul class="highlights">
-          <li class="highlight"> honing our collective consciousness </li>
-          <li class="highlight"> critical problems in the developing world </li>
-          <li class="highlight"> new technologies, advancing society </li>
+          {% for focus in site.data.focuses %}
+            <li class="highlight">{{focus.title}}</li>
+          {% endfor %}
         </ul>
       </div>
       <div class="get-involved">
         <button class="default-button-large" onclick="window.location='#contact'"><a class="inner-link" href="#contact">GET INVOLVED</a></button>
       </div>
       <div class="banner-quote">
-        "...how to love your medium long enough to create a masterpiece..."
+        {{site.data.consts.tagline}}
       </div>
     </div>
     <div class="image-carousel">

@@ -2,8 +2,8 @@
   <div class="about">
     <div class="title">ABOUT TOM</div>
     <div class="details">
-      <div class="photo-container"><img class="headshot" src="/statics/img/headshot2.jpg"></div>
-      <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut dui felis. Nulla a fringilla diam, sit amet efficitur tortor. Nullam quis ante semper, vehicula eros a, vulputate felis. Mauris sed urna sapien. Morbi vehicula ante vitae eros bibendum, vel eleifend mi fringilla. </div>
+      <div class="photo-container"><img class="headshot" src={{site.data.consts.headshot}}></div>
+      <div class="description">{{site.data.consts.about}}</div>
     </div>
     <div class="upcoming">
       <div class="title">Upcoming Events</div>
@@ -18,9 +18,9 @@
       {% endfor %}
     </div>
     <div class="links">
-      <a class="link" id="email" href="mailTo:tom@fact0ry.com">tom@fact0ry.com</a>
+      <a class="link" id="email" href="mailTo:{{site.data.consts.email}}">{{site.data.consts.email}}</a>
      |
-      <a class="link" id="twitter" href="https://twitter.com/thegoodtomchi">@thegoodtomchi</a>
+      <a class="link" id="twitter" href={{site.data.consts.twitter.url}}>{{site.data.consts.twitter.handle}}</a>
     </div>
   </div>
 </footer>
