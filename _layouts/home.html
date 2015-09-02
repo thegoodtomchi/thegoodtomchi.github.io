@@ -1,8 +1,20 @@
 ---
 layout: default
 ---
+<div class="home">
+  <div id="banner">
+    {% include banner.html %}
+  </div>
 
-{% include banner.html %}
-{% include focuses.html %}
-{% include contact.html %}
-{% include footer.html %}
+  <div id="focuses">
+    {% include focuses.html %}
+  </div>
+
+  <div id="contact-form">
+    {% include contact.html %}
+  </div>
+
+  <div class="footer">
+    {% include footer.html %}
+  </div>
+</div>

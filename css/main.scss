@@ -1,12 +1,16 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
-// @charset "utf-8";
-//
-//
-//
+@charset "utf-8";
+
+// custom font faces
+@font-face {
+  font-family: Dinot;
+  src: url(/statics/fonts/dinot-regular.otf);
+}
+
 // // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: Dinot, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -54,6 +58,7 @@ $content-width: 100%;
 @import
         "buttons",
         "base",
+        "layout",
         "focuses",
         "banner",
         "contact",

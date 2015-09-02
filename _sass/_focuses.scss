@@ -1,7 +1,12 @@
 .focus-buckets {
   width: 60%;
-  margin: 2em auto;
-  border-bottom: #4A4A4A solid thin;
+  margin: 3em auto;
+
+  .border-line {
+    border-bottom: #4A4A4A solid thin;
+    width: 150vw;
+    transform: translateX(-30%);
+  }
 }
 
 .focus-buckets .focus {
@@ -23,9 +28,11 @@
           color: $text-body-color;
 
           .readmore {
-            color: $site-highlight;
+            float: left;
+            color: $orange-color;
             text-decoration: none;
-            margin-left: .5em;
+            margin-right: 1.5em;
+            cursor: pointer;
           }
       }
     }
@@ -35,7 +42,6 @@
       max-width: 10em;
       height: 125px;
       background-color: $grey-color-dark;
-      cursor: pointer;
     }
   }
 }

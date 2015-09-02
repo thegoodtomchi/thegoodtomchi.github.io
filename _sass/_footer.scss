@@ -1,9 +1,11 @@
 .site-footer {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
-  padding: 3% 4%;
+  padding: 3% 0%;
   background-color: $grey-color-dark;
   .about {
+    width: 60%;
+    margin: 0 auto;
     .title {
       color: $background-color;
       margin-bottom: 1em;
@@ -17,6 +19,8 @@
         margin-right: 1em;
         float: left;
         border: $grey-color-light solid thin;
+        border-radius: .5em;
+        overflow: hidden;
         .headshot {
           height: 100%;
           width: 100%;

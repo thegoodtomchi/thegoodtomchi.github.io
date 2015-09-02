@@ -6,15 +6,16 @@
       <div class="left">
         <div class="focus-descriptions">
           {{ focus.description }}
-          <a href="#" onclick="sendPage('{{focus.id}}')" title="read more" class="readmore">Read more »</a>
+          <a onclick="sendPage('{{focus.id}}')" title="read more" class="readmore">Read&nbsp;more »</a>
         </div>
       </div>
       <div class="right" onclick="sendPage('{{focus.id}}')">
         <div class="video">
-          {{ focus.video_url }}
+          <a href={{ focus.video_url }}></a>
         </div>
       </div>
     </div>
   </div>
   {% endfor %}
+  <div class="border-line"></div>
 </div>

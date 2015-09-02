@@ -10,7 +10,7 @@ var INTEREST_EMAILS = {
   technologies: 'technologies@tomchi.com'
 };
 
-function ajaxSubmit (subjectLine, payload) {
+function ajaxSubmit (subjectLine, payload, callback) {
   $.ajax({
     url: "//formspree.io/amos.kyler@gmail.com",
     method: "POST",
@@ -24,21 +24,29 @@ function ajaxSubmit (subjectLine, payload) {
     dataType: "json"
     // cc: [subjects[idx] (email) for each subjectLine]
   })
-  .always(function () {
-      alert('Complete!');
+  .done(function () {
+      callback(null, true);
+  })
+  .fail(function () {
+    callback(true, false);
+  });
+}
+
+function clearForm (ids) {
+  ids.forEach(function (id) {
+    document.getElementById(id).value = '';
   });
 }
 
 window.submitForm = function () {
-  // e.stopPropagation();
-  // e.preventDefault();
-
   var interestedIn, subjectLine,
-  textInputBody, emailInput,
-  websiteInput, linkedinInput,
-  bodyPayload;
+  textInputBody, textInput,
+  emailInput, websiteInput,
+  linkedinInput, bodyPayload;
 
-  textInputBody = document.getElementById('textarea-input').value;
+  // we need to preserve a reference to the textInputBody for css processing animations
+  textInput = document.getElementById('textarea-input');
+  textInputBody = textInput.value;
   emailInput = document.getElementById('text-input-email').value;
   websiteInput = document.getElementById('text-input-website').value;
   linkedinInput = document.getElementById('text-input-linkedin').value;
@@ -70,7 +78,13 @@ window.submitForm = function () {
   } else if(interestedIn.length < 1 || textInputBody.length < 1) {
     alert('Please Select an area of interest and enter a message.');
   } else {
-    ajaxSubmit(subjectLine, bodyPayload);
+    ajaxSubmit(subjectLine, bodyPayload, function (err, complete){
+      if (err != null) alert('There was an error submitting the form');
+      if (complete) {
+        alert('The form was successfully completed!');
+        clearForm(['textarea-input', 'text-input-email', 'text-input-website', 'text-input-linkedin']);
+      }
+    });
   }
 
   return false;

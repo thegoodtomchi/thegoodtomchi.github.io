@@ -1,0 +1,22 @@
+<div class="focus-buckets">
+  {% for focus in site.data.focuses %}
+    {% if focus.id == include.focus %}
+      <div class="focus">
+        <div class="title"> > {{ focus.title }} </div>
+        <div class="wrapper">
+          <div class="left">
+            <div class="focus-descriptions">
+              {{ focus.description }}
+              <a href="#" onclick="sendPage('{{focus.id}}')" title="read more" class="readmore">Read more »</a>
+            </div>
+          </div>
+          <div class="right" onclick="sendPage('{{focus.id}}')">
+            <div class="video">
+              <a href={{ focus.video_url }}></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
